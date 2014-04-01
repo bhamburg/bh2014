@@ -1,0 +1,348 @@
+/*
+* BH2014
+* Built with Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #000 url(../images/Center-City-1024-black-blurred.jpg) top center fixed no-repeat;
+    background-size: cover;
+}
+
+.left {float: left !important}
+.right {float: right !important}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+h2 {margin-bottom: 30px}
+
+a:link, a:visited {color: #ff0000; transition: color 0.5s ease;}
+a:hover {color: #000}
+nav a:link, nav a:visited {color: #000;}
+nav a:hover {color: #ff0000}
+
+nav {
+    padding: 20px 0;
+    position: fixed;
+    height: 20px;
+    line-height: 20px;
+    z-index: 100;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #e6e6e6;
+    background-color: rgba(255,255,255,.9);
+}
+
+nav.desktop {display: block;}
+nav.mobile {display: none;}
+
+nav li {
+    float: left;
+    margin-right: 20px;
+    font-weight: 900;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.social {display: block; float: right;}
+
+header {
+    padding: 85px 0 30px 0;
+}
+
+header img {
+    margin: 10px 20px 0 5px;
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+
+header h1 {
+    font-size: 37px;
+    word-spacing: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 5px 0 0 0;
+    line-height: 1;
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 7px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    color: #e6e6e6;
+}
+
+section {
+    padding: 30px 0;
+}
+
+section.white {
+    background-color: #e6e6e6;
+}
+
+section.semi {
+    background-color: #e6e6e6;
+    background-color:  rgba(255,255,255,.7);
+}
+
+section.transparent {
+    background-color: transparent;
+}
+
+section.secondary ul {list-style: square; margin-left: 18px}
+
+section.secondary ul li span:before {content: '\A'; white-space: pre;}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+section a img {
+    opacity:.8;
+    transition: opacity 0.5s ease;
+}
+section a:hover img {
+    opacity:1;
+}
+*/
+
+.one-third {min-height: 150px;}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+textarea {width: 98%;}
+
+section.dark, footer {
+    background-color: rgba(0,0,0,.7);
+    color: #e6e6e6;
+}
+footer {
+    padding: 20px 0;
+    font-weight: 900;
+}
+
+section.dark h1, section.dark h2, section.dark h3, section.dark h4, section.dark h5, section.dark h6 {color: #e6e6e6;}
+
+section.dark a:hover {color: #ffffff}
+
+footer p {margin: 0}
+footer a:link, footer a:visited {color: #e6e6e6}
+footer a:hover {color: #ff0000}
+
+
+/* #Page Styles
+================================================== */
+
+.hero {
+    display: block;
+    width: 100%;
+    padding: 165px 0 110px 0;
+}
+
+.hero img {
+    float: left;
+    margin: 10px 60px 0 0;
+    height: 125px;
+    width: 125px;
+}
+
+.hero h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 85px;
+    margin: 0;
+    word-spacing: 30px;
+}
+
+.hero p {
+    font-size: 45px;
+    font-weight: 400;
+    margin: 20px 0 0 10px;
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+        body {
+            background: #000 url(../images/Center-City-1024-black-blurred.jpg) top center fixed no-repeat;
+            background-size: cover;
+        }
+        
+        .hero {
+            padding: 110px 0 60px 0;
+        }
+
+        .hero img {
+            margin: 10px 40px 0 0;
+            height: 100px;
+            width: 100px;
+        }
+
+        .hero h1 {
+            font-size: 68px;
+        }
+
+        .hero p {
+            font-size: 37px;
+            font-weight: 400;
+            margin: 15px 0 0 10px;
+        }
+    }
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+        body {
+            background-size: cover;
+        }
+        
+        .hero h1 {
+            font-size: 68px;
+        }
+
+        .hero p {
+            font-size: 37px;
+            font-weight: 400;
+            margin: 15px 0 0 0;
+        }
+    }
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+        body {
+            background-size: cover;
+        }
+        
+        nav.desktop {display: none}
+        nav.mobile {display: block; position: absolute;}
+        
+        nav li {
+            margin-right: 20px;
+        }
+        
+        header, .hero {
+            padding: 75px 0 20px 0;
+        }
+        
+        header img, .hero img {
+            margin: 5px 20px 0 5px;
+            height: 60px;
+            width: 60px;
+        }
+        
+        header h1, .hero h1 {
+            font-size: 37px;
+            word-spacing: 15px;
+        }
+
+        headerp, .hero p {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 7px 0 0 0;
+        }
+        .left {float: none !important}
+        .right {float: none !important}
+        
+        .one-third {min-height: 0;}
+    }
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+        body {
+            background-size: cover;
+        }        
+    }
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+        body {
+            background-size: cover;
+        }
+        
+        header img, .hero img {
+            margin: 5px 15px 0 5px;
+            height: 50px;
+            width: 50px;
+        }
+        
+        header h1, .hero h1 {
+            font-size: 26px;
+            word-spacing: 5px;
+            margin-top: 5px;
+        }
+        
+        header p, .hero p {
+            font-size: 14px;
+            margin: 5px 0 0 0;
+        }
+        
+        .left {float: none !important}
+        .right {float: none !important}
+    }
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
