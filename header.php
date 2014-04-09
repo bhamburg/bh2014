@@ -1,46 +1,109 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?>> <!--<![endif]-->
+<html <?php language_attributes(); ?>>
 <head>
 
-	<!-- Basic Page Needs
-  ================================================== -->
+<!--=============================================================================
+ 
+ 
+                           ....    ....................                          
+                       .......    ........................                       
+                   ..........    ..............................                  
+                 ...........    .................................                
+               ............    ....................................              
+            .............    ..................................... ..            
+          ..............    .....................................  ....          
+         ..............    ....................................   .......        
+       ..............     ....................................   .........       
+      ..............     ....................................  ............      
+     ..............     ...................................    .............     
+    ..............     ...................................   ................    
+   ..............     ...................................   ..................   
+   .............     ...................................   ....................  
+  .............     ....... ...........................   ...........   .......  
+  ............     ......   .........................    ........       ........ 
+  ...........     ......     ........................   .......        ......... 
+ ...........     .......      .....................    .... .....    ............
+ ..........     .........      ...................    ..........    .............
+ .........     ..........  .     ................    .. .......    ..............
+ ........     ...........  ....            ....      ........    ................
+ .......     ............  ....................     .........    ................
+ ......      ...........   ..................      .........    .................
+  ....      ...........   ..................      .........    ................. 
+  ...      ............  ..................      .........    .................. 
+  ...      ............  .................      .........    ..................  
+   .      ...........  ..................     ..........    ...................  
+         ............ ..................     ..........    ...................   
+         ..........  ..................     ...........    .................     
+         ........  ..................      ...........     .................     
+         ......  ....................     ............      .......... ....      
+           .. .......................    .............       .....   .....       
+         ...............................................       ..........        
+          .............................................................          
+            .........................................................            
+               ....................................................              
+                 ................................................                
+                   ............................................                  
+                       ...................................                       
+                           ...........................                           
+                                 ...............                                 
+
+
+            __   __                                  __        __   __  
+           |__) |__) |  /\  |\ |    |__|  /\   |\/| |__) |  | |__) / _` 
+           |__) |  \ | /~~\ | \|    |  | /~~\  |  | |__) \__/ |  \ \__> 
+                                                             
+                      Web Developer, Designer & Banjoist
+
+
+ Hey! Thanks for checking out my source code. I hope you like what you see.
+
+=============================================================================-->
+
+	<!-- Basic Page Needs -->
 	<meta charset="utf-8">
-	<title><?php wp_title('::',1,'right'); ?> <?php bloginfo('name'); ?></title>
+	<title><?php wp_title('|',1,'right'); ?><?php bloginfo('name'); ?></title>
 	<meta name="description" content="Web Developer, Designer &amp; Banjoist">
 	<meta name="author" content="Brian Hamburg">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<!-- Mobile Specific Metas
-  ================================================== -->
+	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS
-  ================================================== -->
-    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,400,900' rel='stylesheet' type='text/css'>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- CSS -->
+	<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,900' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!-- Favicons
-	================================================== -->
+	<!-- Favicons -->
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon-114x114.png">
 
-    <?php wp_head(); ?>
+<!-- Plugins and whatnot-->
+<?php wp_head(); ?>
+
+    
+    <!-- Searchbar Animation -->
+    <script>
+        jQuery(document).ready(function($){
+            $(".searchbar").click(function(){
+                $(".searchbar").addClass("expanded");
+                $( ".searchbar input" ).focus();
+            });
+            $( ".searchbar input" ).focusout(function(){
+                $(".searchbar").removeClass("expanded");
+            });
+        });
+    </script>
 </head>
 <body <?php body_class(); ?>>
 
-	<!-- Primary Page Layout
-	================================================== -->
-	
+<!-- Navbar -->
 <nav class="desktop">
     <div class="container">
         <ul class="eleven columns">
@@ -55,8 +118,11 @@
 			<li><a href="http://www.linkedin.com/in/brianhamburg/"><i class="fa fa-linkedin"></i></a></li>
 			<li><a href="https://github.com/bhamburg"><i class="fa fa-github"></i></a></li>
 			<li><a href="http://www.youtube.com/mummerburger"><i class="fa fa-youtube"></i></a></li>
-			<li><a href="<?php bloginfo('url'); ?>/feed"><i class="fa fa-rss"></i></a></li>
 		</ul>
+        <div class="searchbar">
+            <i class="fa fa-search"></i>
+            <?php get_search_form(); ?>
+        </div>
     </div>
 </nav>
 <nav class="mobile">
@@ -67,6 +133,12 @@
             <li><a href="<?php bloginfo('url'); ?>/projects"><i class="fa fa-briefcase"></i></a></li>
             <li><a href="<?php bloginfo('url'); ?>/banjo"><i class="fa fa-music"></i></a></li>
             <li><a href="<?php bloginfo('url'); ?>/contact"><i class="fa fa-envelope-o"></i></a></li>
-        </ul>
+		</ul>
+        <div class="searchbar">
+            <i class="fa fa-search"></i>
+            <?php get_search_form(); ?>
+        </div>
     </div>
 </nav>
+    
+<!-- Primary Page Layout -->

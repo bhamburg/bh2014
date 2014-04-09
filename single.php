@@ -27,7 +27,8 @@
                 <i class="fa fa-tag fa-fw"></i> <em><?php the_tags(''); ?></em><br />
             </p>
             <p><?php next_post_link( '%link', 'Next: %title <span class="meta-nav">' . _x( '', 'Next post link' ) . '</span>' ); ?></p><p><?php previous_post_link( '%link', 'Previous: <span class="meta-nav">' . _x( '', 'Previous post link' ) . '</span> %title' ); ?></p>
-        </div>
+	   </div>
+		<div class="sixteen columns"><?php comments_template(); ?></div>
             <?php endwhile; else: ?>
             <div class="sixteen columns">
 		      <h3><?php _e('Sorry, this page does not exist.'); ?></h3>

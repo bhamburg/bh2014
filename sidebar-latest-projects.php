@@ -2,6 +2,7 @@
     //WordPress loop for custom post type
     $my_query = new WP_Query('post_type=projects&posts_per_page=4');
     if ($my_query->have_posts()) : ?>
+        <!-- Projects Pre-Footer -->
         <section class="semi">
             <div class="container">
                 <div class="sixteen columns"><h2>Latest Projects</h2></div>

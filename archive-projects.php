@@ -12,14 +12,14 @@
 <section class="white">
     <div class="container">
         <div class="sixteen columns"><h2>Work Summary</h2>
-        <p>I have over ten years of experience in various technical and creative roles, and over five years of experience with accessible, standards-based web development. I have a passion for design and creating user experience, especially in the context of content management systems such as <a href="http://wordpress.org">WordPress</a>.</p>
+        <p>I have over ten years of experience in various technical and creative roles, and over five years of experience with accessible, standards-based web development. I have a passion for design and creating user experiences, especially in the context of content management systems such as <a href="http://wordpress.org">WordPress</a>.</p>
         <h4><a href="<?php bloginfo('url'); ?>/resume">View my r&eacute;sum&eacute;</a></h4>
         </div>
 	</div><!-- container -->
 </section><!-- section -->
 <?php
     //WordPress loop for custom post type
-    $my_query = new WP_Query('post_type=projects&posts_per_page=18');
+    $my_query = new WP_Query('post_type=projects&posts_per_page=9');
     if ($my_query->have_posts()) : ?>
         <section class="semi">
             <div class="container">
