@@ -18,7 +18,7 @@
         </div>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="one-third column">
-                <h4><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(400,400); ?></a><br /><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                <h4><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(400,400); ?></a><br /><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><br />
         </div>
         <?php endwhile; else: ?>
             <h3><?php _e('Sorry, there are no posts.'); ?></h3>

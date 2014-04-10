@@ -97,14 +97,14 @@ nav li a {
     border: none;
     display: none;
 }
-.searchform input:focus {outline: none; border: none; box-shadow: none; color: #000;}
+.searchform input:focus {outline: none; border: none; box-shadow: none; color: #fff;}
 
 .searchbar.expanded {
-    background-color: #fff;
+    background-color: #d3412a;
     width: 100%;
     cursor: auto;
 }
-.searchbar.expanded i {color: #d3412a;}
+.searchbar.expanded i {color: #f5f5f5;}
 .searchbar.expanded input {display: block}
 
 header {
@@ -175,7 +175,7 @@ section a:hover img {
 }
 */
 
-.one-third {min-height: 152px;}
+.one-third.column, .four.columns {min-height: 152px; margin-bottom: 20px}
 
 .video-container {
     position: relative;
@@ -304,8 +304,6 @@ footer a:hover {color: #d3412a}
         .social {margin-right: 70px;}
         .searchbar {right: 0}
         
-        p:last-child {margin-bottom: 20px}
-        
         header, .hero {
             padding: 75px 0 20px 0;
         }
@@ -321,7 +319,7 @@ footer a:hover {color: #d3412a}
             word-spacing: 10px;
         }
 
-        header p, .hero p, header p:last-child, .hero p:last-child, footer p:last-child {
+        header p, .hero p {
             margin: 7px 0 0 0;
         }
         header p, .hero p {
@@ -331,7 +329,7 @@ footer a:hover {color: #d3412a}
         .left {float: none !important}
         .right {float: none !important}
         
-        .one-third {min-height: 0;}
+        .one-third.column {min-height: 0; margin-bottom: 20px}
     }
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

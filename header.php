@@ -48,9 +48,9 @@
                                  ...............                                 
 
 
-            __   __                                  __        __   __  
-           |__) |__) |  /\  |\ |    |__|  /\   |\/| |__) |  | |__) / _` 
-           |__) |  \ | /~~\ | \|    |  | /~~\  |  | |__) \__/ |  \ \__> 
+            __   __                                 __        __   __  
+           |__) |__) |  /\  |\ |    |__|  /\  |\/| |__) |  | |__) / _` 
+           |__) |  \ | /~~\ | \|    |  | /~~\ |  | |__) \__/ |  \ \__> 
                                                              
                       Web Developer, Designer & Banjoist
 
@@ -109,7 +109,7 @@
         <ul class="eleven columns">
             <li><a href="<?php bloginfo('url'); ?>"><i class="fa fa-home"></i></a></li>
             <li><a href="<?php bloginfo('url'); ?>/posts">Posts</a></li>
-            <li><a href="<?php bloginfo('url'); ?>/projects">Projects</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/projects">Work</a></li>
             <li><a href="<?php bloginfo('url'); ?>/banjo">Banjo</a></li>
             <li><a href="<?php bloginfo('url'); ?>/contact">Contact</a></li>
         </ul>
