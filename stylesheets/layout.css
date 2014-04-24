@@ -31,7 +31,7 @@ p:last-child {margin-bottom: 0}
 
 h1 {
     font-family: 'Lato', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 h2, h3, h4, h5, h6 {
@@ -41,10 +41,10 @@ h2, h3, h4, h5, h6 {
 
 h2 {margin-bottom: 30px}
 
-a:link, a:visited {color: #d3412a; transition: color 0.3s ease;}
+a:link, a:visited {color: #cc6600; transition: color 0.3s ease;}
 a:hover {color: #000}
 nav a:link, nav a:visited {color: #000;}
-nav a:hover {color: #d3412a}
+nav a:hover {color: #cc6600}
 
 nav {
     padding: 20px 0;
@@ -82,7 +82,7 @@ nav li a {
     right: 10px;
     position: absolute;
     height: 60px;
-    background-color: #d3412a;
+    background-color: #cc6600;
     cursor: pointer
 }
 .searchbar i {float: left; margin: 20px; color: #f5f5f5}
@@ -90,8 +90,8 @@ nav li a {
 .searchform input {
     width: 100%;
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    padding-top: 20px;
+    font-size: 20px;
+    padding-top: 18px;
     margin-right: 20px;
     background: none;
     border: none;
@@ -100,15 +100,33 @@ nav li a {
 .searchform input:focus {outline: none; border: none; box-shadow: none; color: #fff;}
 
 .searchbar.expanded {
-    background-color: #d3412a;
+    background-color: #cc6600;
     width: 100%;
     cursor: auto;
 }
 .searchbar.expanded i {color: #f5f5f5;}
 .searchbar.expanded input {display: block}
 
+
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,.5); 
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0,0,0,.5);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0,0,0,.5);
+}
+
+:-ms-input-placeholder {  
+   color: #000; color: rgba(0,0,0,.5); 
+}
+
+
 header {
-    padding: 85px 0 30px 0;
+    padding: 84px 0 30px 0;
     background-color: #000;
     background-color:  rgba(0,0,0,.4);
 }
@@ -126,7 +144,7 @@ header h1 {
     font-family: 'Lato', sans-serif;
     color: #fff;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 400;
     margin: 5px 0 0 0;
     line-height: 1;
 }
@@ -146,6 +164,8 @@ section {
 section.white {
     background-color: #f5f5f5;
 }
+
+.panel-grid img {border-radius: 50%}
 
 section.semi {
     background-color: #d6d6d6;
@@ -196,6 +216,48 @@ section a:hover img {
 
 textarea {width: 100%;}
 
+.good {
+    background-color: #4cd964;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 1px;
+}
+.bad {
+    background-color: #8e8e93;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+a.button, button a {color: #fff}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    background-color: #cc6600;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom:#000 solid 1px; 
+    text-shadow: none;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    background-color: #cc6600;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom:#000 solid 0px;
+    text-shadow: none;
+    font-size: 1.1em;
+    margin-top: 1px;
+}
+
 section.dark, footer {
     background-color: rgba(0,0,0,.6);
     color: #f5f5f5;
@@ -211,7 +273,7 @@ section.dark a:hover {color: #ffffff}
 
 footer p {margin: 0}
 footer a:link, footer a:visited {color: #f5f5f5}
-footer a:hover {color: #d3412a}
+footer a:hover {color: #cc6600}
 
 
 /* #Page Styles
@@ -232,7 +294,7 @@ footer a:hover {color: #d3412a}
 
 .hero h1 {
     font-family: 'Lato', sans-serif;
-    font-size: 85px;
+    font-size: 84px;
     margin: 0;
     word-spacing: 30px;
 }
@@ -262,7 +324,7 @@ footer a:hover {color: #d3412a}
         }
 
         .hero h1 {
-            font-size: 68px;
+            font-size: 67px;
         }
 
         .hero p {
@@ -282,7 +344,7 @@ footer a:hover {color: #d3412a}
         
         .searchbar {right: 0}
         
-        .hero h1 {font-size: 68px}
+        .hero h1 {font-size: 67px}
 
         .hero p {
             font-size: 37px;
@@ -293,7 +355,7 @@ footer a:hover {color: #d3412a}
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
-        body {background-attachment: scroll;}
+        body {background-attachment: scroll; background-repeat: no-repeat}
         
         nav.desktop {display: none}
         nav.mobile {display: block; position: absolute;}
@@ -326,6 +388,11 @@ footer a:hover {color: #d3412a}
             font-size: 20px;
             font-weight: 400;
         }
+        
+        section.semi {background-color: #d6d6d6}
+        
+        .panel-grid img {margin: 0 auto}
+        
         .left {float: none !important}
         .right {float: none !important}
         
@@ -334,16 +401,12 @@ footer a:hover {color: #d3412a}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
-        body {
-            background-size: cover;
-        }        
+        body {background-attachment: scroll; background-repeat: no-repeat}        
     }
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-        body {
-            background-size: cover;
-        }
+        body {background-attachment: scroll; background-repeat: no-repeat}
         
         header img {
             margin: 5px 15px 0 5px;

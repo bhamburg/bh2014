@@ -12,10 +12,7 @@
 <section class="white">
     <div class="container">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="four columns right">
-            <?php the_post_thumbnail(400,400); ?>
-        </div>
-        <div class="twelve columns">
+        <div class="sixteen columns">
             <h2><?php the_title(); ?></h2>
         </div>
         <div class="twelve columns">
@@ -26,7 +23,8 @@
                 <i class="fa fa-folder-open-o fa-fw"></i> <em><?php the_category(', '); ?></em><br />
                 <i class="fa fa-tag fa-fw"></i> <em><?php the_tags(''); ?></em><br />
             </p>
-            <p><?php next_post_link( '%link', 'Next: %title <span class="meta-nav">' . _x( '', 'Next post link' ) . '</span>' ); ?></p><p><?php previous_post_link( '%link', 'Previous: <span class="meta-nav">' . _x( '', 'Previous post link' ) . '</span> %title' ); ?></p>
+            <?php previous_post_link( '%link', '<button style="float: left"><i class="fa fa-reply fa-fw"></i> Prev</button>' ); ?>
+            <?php next_post_link( '%link', '<button style="float: right">Next <i class="fa fa-share fa-fw"></i></button>' ); ?>
 	   </div>
 		<div class="sixteen columns"><?php comments_template(); ?></div>
             <?php endwhile; else: ?>

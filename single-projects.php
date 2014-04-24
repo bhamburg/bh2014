@@ -38,7 +38,8 @@
                 <p><i class="fa fa-briefcase fa-fw"></i> <em><?php echo $project_cats; ?></em><br />
                 <i class="fa fa-calendar fa-fw"></i> <em><?php the_time('F j, Y'); ?></em></p>
             <?php endif; ?>
-            <p><?php next_post_link( '%link', 'Next: %title <span class="meta-nav">' . _x( '', 'Next post link' ) . '</span>' ); ?></p><p><?php previous_post_link( '%link', 'Previous: <span class="meta-nav">' . _x( '', 'Previous post link' ) . '</span> %title' ); ?></p>
+            <?php previous_post_link( '%link', '<button style="float: left"><i class="fa fa-reply fa-fw"></i> Prev</button>' ); ?>
+            <?php next_post_link( '%link', '<button style="float: right">Next <i class="fa fa-share fa-fw"></i></button>' ); ?>
         </div>
             <?php endwhile; else: ?>
             <div class="sixteen columns">
